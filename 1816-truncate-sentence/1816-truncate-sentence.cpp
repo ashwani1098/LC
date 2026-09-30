@@ -5,11 +5,8 @@ public:
         string ans="";
         for(int i=0;i<s.size();i++){
             if(s[i]==' ') countSpace++;
-            if(countSpace<k){
-                ans.push_back(s[i]);
-            }
-            else break;
+            if(countSpace==k) return s.substr(0,i);
         }
-        return ans;
+        return s;
     }
 };
