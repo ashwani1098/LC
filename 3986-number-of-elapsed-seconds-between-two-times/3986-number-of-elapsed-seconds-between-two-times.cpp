@@ -7,8 +7,9 @@ public:
         int h2=stoi(endTime.substr(0,2));
         int m2=stoi(endTime.substr(3,2));
         int s2=stoi(endTime.substr(6,2));
-    
-        return ((h2*3600 + m2*60 + s2)-(h1*3600 + m1*60 + s1));
+        int ans=((h2*3600 + m2*60 + s2)-(h1*3600 + m1*60 + s1));
+        // if(ans<0) total=total+(24*3600);
+        return ans;
         
     }
 };
