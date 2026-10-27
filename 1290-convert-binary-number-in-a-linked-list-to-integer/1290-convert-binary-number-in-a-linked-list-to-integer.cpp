@@ -11,13 +11,11 @@
 class Solution {
 public:
     int getDecimalValue(ListNode* head) {
-        ListNode*temp=head;
         string s="";
-        while(temp!=NULL){
-            s+=to_string(temp->val);
-            temp=temp->next;
+        while(head!=NULL){
+            s+=to_string(head->val);
+            head=head->next;
         }
-        int n=stoi(s,nullptr,2);
-        return n;
+        return stoi(s,nullptr,2);
     }
 };
