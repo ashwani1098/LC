@@ -1,13 +1,12 @@
 class Solution {
 public:
     bool hasSameDigits(string s) {
-        while(s.size()!=2){
-            int n=s.size();
-            string temp="";
+        int n=s.size();
+        while(n!=2){
             for(int i=0;i<n-1;i++){
-                temp.push_back((s[i] + s[i+1]) % 10);
+                s[i]=(s[i] + s[i+1]) % 10;
             }
-            s=temp;
+            n--;
         }
         if(s[0]==s[1]) return true;
         else return false;
